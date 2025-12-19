@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Usar CDN apenas para testes e protótipos-->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>TailwindCSS</title>
+</head>
+
+<body class="bg-gray-400 h-screen">
+    <a href="https://tailwindcss.com/docs/flex-basis" target="_blank">Documentação de Flexbox</a>
+
+    <br>
+    <br>
+
+    <!--Row-->
+    <div class="h-30 m-4 bg-blue-100 flex justify-center items-center space-x-4"> <!--sempre deve usar a classe "flex"-->
+        <div class="w-20 h-20 bg-red-500"></div>
+        <div class="w-20 h-20 bg-green-500"></div>
+        <div class="w-20 h-20 bg-blue-500"></div>
+    </div>
+
+    <!--Column-->
+    <div class="m-4 bg-red-100 flex flex-col space-y-4"> <!--sempre deve usar a classe "flex"-->
+        <div class="w-20 h-20 bg-red-500"></div>
+        <div class="w-20 h-20 bg-green-500"></div>
+        <div class="w-20 h-20 bg-blue-500"></div>
+    </div>
+
+    <!--Flex-grow: usa todo o espaço disponível-->
+    <div class="h-30 m-4 bg-blue-100 flex justify-center items-center space-x-4"> <!--sempre deve usar a classe "flex"-->
+        <div class="w-20 h-20 bg-red-500"></div>
+        <div class="flex-grow flex-shrink-0 w-20 h-20 bg-green-500"></div> <!--"flex-shrink-0" faz o item parar de diminuir quando chegar em "w-20"-->
+        <div class="w-20 h-20 bg-blue-500"></div>
+    </div>
+
+    <!--Flex-wrap: deixar o item responsivo e pula para a linha de baixo quando acabar o espaço-->
+    <div class="h-auto m-4 bg-blue-100 flex flex-wrap items-center gap-2"> <!--sempre deve usar a classe "flex"-->
+        <div class="w-50 h-20 bg-red-500"></div>
+        <div class="w-50 h-20 bg-green-500"></div>
+        <div class="w-50 h-20 bg-blue-500"></div>
+    </div>
+
+    <!--Order: coloca os itens na ordem que quiser-->
+    <div class="h-30 m-4 bg-blue-100 flex items-center gap-2"> <!--sempre deve usar a classe "flex"-->
+        <div class="w-50 h-20 bg-red-500 order-3">1</div>
+        <div class="w-50 h-20 bg-green-500 order-first">2</div>
+        <div class="w-50 h-20 bg-blue-500 order-2">3</div>
+        <div class="w-50 h-20 bg-orange-500 order-last">4</div>
+        <div class="w-50 h-20 bg-pink-500 order-4">5</div>
+    </div>
+
+</body>
+
+</html>

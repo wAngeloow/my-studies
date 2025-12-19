@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Usar CDN apenas para testes e protótipos-->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>TailwindCSS</title>
+</head>
+
+<body class="h-screen">
+    <a href="https://tailwindcss.com/docs/grid-template-columns" target="_blank">Documentação de Grid</a>
+
+    <br>
+    <br>
+
+    <!--Row-->
+    <div class="p-4 bg-black grid grid-flow-col grid-rows-3 gap-4"> <!--sempre deve usar a classe "grid"-->
+        <div class="p-4 bg-purple-500 row-span-3">1</div> <!--"row-span-3" faz o elemento ocupar 3 linhas-->
+        <div class="p-4 bg-pink-500 col-span-2">2</div> 
+        <div class="p-4 bg-yellow-400 col-span-2 row-span-2">3</div> <!--"col-span-2" faz o elemento ocupar 2 colunas, e" "row-span-3" faz o elemento ocupar 2 linhas-->
+    </div>
+
+    <!--Columns-->
+    <div class="mt-50 p-4 bg-black grid grid-cols-3 gap-4"> <!--sempre deve usar a classe "grid"-->
+        <div class="h-25 p-4 bg-blue-100 col-span-2">1</div> <!--"grid-col-2" faz o elemento ocupar 2 colunas-->
+        <div class="h-25 p-4 bg-red-100">2</div>
+        <div class="h-25 p-4 bg-green-100">3</div>
+        <div class="h-25 p-4 bg-blue-300">4</div>
+        <div class="h-25 p-4 bg-red-300">5</div>
+        <div class="h-25 p-4 bg-green-300 col-span-3">6</div> <!--"grid-col-3" faz o elemento ocupar 3 colunas-->
+        <div class="h-25 p-4 bg-blue-500">7</div>
+        <div class="h-25 p-4 bg-red-500">8</div>
+        <div class="h-25 p-4 bg-green-500">9</div>
+        <div class="h-25 p-4 bg-blue-900">10</div>
+        <div class="h-25 p-4 bg-red-900 col-span-2">11</div> <!--"grid-col-2" faz o elemento ocupar 2 colunas-->
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Usar CDN apenas para testes e protótipos-->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>TailwindCSS</title>
+</head>
+
+<body class="h-screen bg-purple-300 sm:bg-green-100">
+    <a href="https://tailwindcss.com/docs/hover-focus-and-other-states" target="_blank">Documentação de Hover, Focus, Active, etc.</a>
+
+    <br>
+    <br>
+
+    <!--Hover: ao passar o mouse em cima-->
+    <button class="bg-blue-400 hover:bg-red-400 hover:text-white m-5 p-2 rounded-md">
+        Hover me
+    </button>
+
+    <!--Group-hover: usado para aplicar hover em carsd-->
+    <div class="group w-72 bg-gray-300 p-2 m-5 rounded-md">
+        <h4 class="font-bold group-hover:text-orange-500">Título do card</h4>
+        <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    <!--Focus: quando o item está selecionado-->
+    <input type="text" class="rounded-sm m-4 px-4 py-2 bg-gray-300 hover:bg-purple-300 focus:text-white focus:outline-2 focus:outline-offset-2 focus:outline-violet-500">
+
+    <!--Active: quando segura o botão no item-->
+    <button class="p-2 rounded-sm bg-green-400 active:bg-green-700">
+        Save changes
+    </button>
+</body>
+
+</html>
